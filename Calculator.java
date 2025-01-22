@@ -53,9 +53,23 @@ class Calculator {
         System.out.println(); // End the line after printing the series
     }
 
-    // Calculate the average of an array
+    // Calculate the average and variance of an array
     void calculateAverage() {
-        double average = in.inputArrayAndCalculateAverage(); 
+        int sum = 0 ;
+        int varianceSum = 0;
+        int[] array = in.inputArrayAndCalculateAverage(); 
+        for (int i = 0; i < array.length; i++) {
+            
+            sum += array[i];
+        }
+        int average = sum/array.length;
+        for (int i = 0; i < array.length; i++) {
+             varianceSum += Math.pow(array[i] - average, 2); // Sum of squared differences from the mean
+        }
+
         System.out.println("The average is: " + average);
+        System.out.println("The variance is: " + varianceSum);
+
     }
+
 }

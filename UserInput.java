@@ -24,8 +24,8 @@ class UserInput {
         return scan.nextInt();
     }
 
-    // Method to take an array as input and calculate the average
-    double inputArrayAndCalculateAverage() {
+    // Method to take an array as input 
+    int[] inputArrayAndCalculateAverage() {
         Scanner scan = new Scanner(System.in);
 
         System.out.println("Enter the size of the array: ");
@@ -37,9 +37,9 @@ class UserInput {
 
         for (int i = 0; i < size; i++) {
             array[i] = scan.nextInt();
-            sum += array[i];
+           
         }
 
-        return (double) sum / size; // Return the average
+        return array; // Returns the array
     }
 }
